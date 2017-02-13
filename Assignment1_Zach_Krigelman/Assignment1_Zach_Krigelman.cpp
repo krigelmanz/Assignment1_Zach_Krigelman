@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 
@@ -52,21 +53,22 @@ int main()
 	}
 	for (int withdrawNum = 0; withdrawNum < 9 && withdraw[withdrawNum] != 0; withdrawNum++)
 	{
-		cout << "Withdraws: " << withdraw[withdrawNum] << endl;
+		cout << "\nWithdraw: " << setw(19) << withdraw[withdrawNum] << endl;
 	}
 	for (int depositNum = 0; depositNum < 9 && deposit[depositNum] != 0; depositNum++)
 	{
-		cout << "Deposit: " << deposit[depositNum] << endl;
+		cout << "Deposit: " << setw(21) << deposit[depositNum] << endl;
 	}
 	for (int checkNum = 0; checkNum < 9 && check[checkNum] != 0; checkNum++)
 	{
-		cout << "Check: " << check[checkNum] << endl;
+		cout << "Check: " << setw(23) << check[checkNum] << endl;
 	}
-	cout << "Initial balance is: " << balance << endl;
-	cout << "Total deposits: " << depositTotal << endl;
-	cout << "Total checks: " << checkTotal << endl;
-	cout << "Total withdraws: " << withdrawTotal << endl;
-	cout << "Ending balance: " << balance + depositTotal - checkTotal - withdrawTotal << endl;
+	cout << "------------------------------" << endl;
+	cout << "Initial balance is: " << setw(10) << balance << endl;
+	cout << "Total deposits: " << setw(14) << depositTotal << endl;
+	cout << "Total checks: " << setw(16) << checkTotal << endl;
+	cout << "Total withdraws: " << setw(13) << withdrawTotal << endl;
+	cout << "Ending balance: " << setw(14) << balance + depositTotal - checkTotal - withdrawTotal << endl;
     return 0;
 }
 
